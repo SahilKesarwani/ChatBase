@@ -3,6 +3,7 @@ const http = require('http');
 const path = require('path');
 const app = express();
 const server = http.createServer(app);
+const port = process.env.PORT || 3000;
 
 const { Server } = require('socket.io');
 const io = new Server(server);
@@ -11,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const users = {};
 
-server.listen(3000);
+server.listen(port);
 
 io.on('connection', socket =>{
     socket.on('new-user-joined', name =>{

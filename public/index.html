@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Base</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <img src="img/logo.png" alt="logo" id="logo">
+            <h1 id="name">Chat Base</h1>
+            <h1 id="type">Global Chat <button id="more-option-button">&vellip;</button></h1>
+        </nav>
+
+        <ul id="more-option-list">
+            <li class="more-option-item" id="online">Online <span id="online-count"></span></li>
+        </ul>
+
+        <ul id="online-list">
+            <li class="online-list-item">You <span class="status">(online)</span></li>
+        </ul>
+
+        <div id="message-container">
+            <div class="join-left" style="display: none;">You joined the chat</div>
+        </div>
+        <div id="send-container">
+            <form action="" id="message-form">
+                <input type="text" name="message-input" autocomplete="off" id="message-input" placeholder="Type a message">
+                <button type="submit" id="send-button"><i class="fas fa-paper-plane send-icon"></i></button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="modal-container">
+        <div id="name-container">
+            <h1 id="ask-name">Enter your name <span id="name-length"> (max chars: 20) </span> :</h1>
+            <form action="" id="name-form">
+                <input type="text" name="name-input" autocomplete="off" id="name-input" placeholder="Your Name" maxlength="20" required>
+                <button type="submit" id="name-button">Enter</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/client.js"></script>
+</body>
+</html>

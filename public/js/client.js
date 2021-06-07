@@ -37,6 +37,7 @@ messageForm.addEventListener('submit', e => {
         socket.emit('send', messageInp);
         messageInput.value = '';
     }
+    messageInput.focus();
 })
 
 window.addEventListener('click', e => {

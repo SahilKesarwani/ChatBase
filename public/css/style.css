@@ -66,7 +66,7 @@ nav {
     list-style: none;
     position: absolute;
     right: 0;
-    top: 45px;
+    top: 44px;
     background-color: #2a2f32;
     color: #fff;
     z-index: 2;
@@ -78,7 +78,7 @@ nav {
     list-style: none;
     position: absolute;
     right: 100px;
-    top: 45px;
+    top: 44px;
     background-color: #2a2f32;
     color: #fff;
     z-index: 2;
@@ -149,6 +149,7 @@ nav {
     border: none;
     color: #fff;
     border-radius: 10px;
+    word-break: break-all;
 }
 
 .join-left {
@@ -222,6 +223,7 @@ form {
     background-color: #6e7377;
     color: white;
     border-radius: 50%;
+    outline: none;
 }
 
 #send-button:hover {

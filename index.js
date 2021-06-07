@@ -23,7 +23,7 @@ io.on('connection', socket =>{
     });
     
     socket.on('send', message =>{
-        socket.broadcast.emit('receive', {name: users[socket.id], message: message});
+        socket.broadcast.emit('receive', {name: users[socket.id], message: message, id: socket.id});
     });
 
     socket.on('on-type', () => {
@@ -34,6 +34,6 @@ io.on('connection', socket =>{
         const name = users[socket.id];
         delete users[socket.id];
         socket.emit('online-users', users);
-        socket.broadcast.emit('user-left', name, users);
+        if(name != null)  socket.broadcast.emit('user-left', name, users);
     })
 });

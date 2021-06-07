@@ -88,6 +88,8 @@ socket.on('user-joined', (name, users) => {
 
 socket.on('receive', data => {
     appendMessage(data.message, 'message', 'left', data.name);
+    let status = document.getElementById(`${data.id}`);
+    status.innerHTML = '(online)';
 })
 
 socket.on('typing', id => {
@@ -95,7 +97,7 @@ socket.on('typing', id => {
     status.innerHTML = '(tping...)';
     setTimeout(() => {
         status.innerHTML ='(online)';
-    }, 3000);
+    }, 8000);
 })
 
 socket.on('user-left', (name, users) => {

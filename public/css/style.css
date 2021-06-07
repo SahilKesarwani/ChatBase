@@ -12,31 +12,37 @@
     margin: 0 auto;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    height: 45px;
+    width: 100%;
+}
+
 nav {
     text-align: center;
     background-color: #2a2f32;
     color: #fff;
-    height: 6%;
+    height: 100%;
+    font-size: 11px;
     display: flex;
     align-items: center;
     position: relative;
 }
 
 #logo {
-    height: 80%;
+    height: 70%;
     margin: 5px;
     width: auto;
 }
 
 #name {
-    font-size: 200%;
     font-weight: bold;
 }
 
 #type {
     position: absolute;
     right: 5px;
-    font-size: 180%;
     font-weight: lighter;
 }
 
@@ -44,8 +50,8 @@ nav {
     background-color: transparent;
     color: #fff;
     border: none;
-    font-size: 100%;
-    width: 4vh;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
 }
 
@@ -59,8 +65,8 @@ nav {
     text-decoration: none;
     list-style: none;
     position: absolute;
-    right: 15px;
-    top: 6%;
+    right: 0;
+    top: 45px;
     background-color: #2a2f32;
     color: #fff;
     z-index: 2;
@@ -71,11 +77,11 @@ nav {
     text-decoration: none;
     list-style: none;
     position: absolute;
-    right: 127px;
-    top: 6%;
+    right: 100px;
+    top: 45px;
     background-color: #2a2f32;
     color: #fff;
-    z-index: 1;
+    z-index: 2;
 }
 
 #online-count {
@@ -95,8 +101,9 @@ nav {
 }
 
 .more-option-item, .online-list-item {
-    padding: 20px;
+    padding: 15px;
     font-weight: 500;
+    font-size: 15px;
 }
 
 .more-option-item:hover, .online-list-item:hover {
@@ -114,8 +121,11 @@ nav {
 
 #message-container {
     overflow: auto;
-    height: 86%;
+    width: 100%;
     background-color: #000;
+    position: fixed;
+    top: 44px;
+    bottom: 54px;
 }
 
 #message-container::-webkit-scrollbar {
@@ -132,7 +142,7 @@ nav {
 }
 
 .message {
-    margin: 2px 10px;
+    margin: 3px 10px;
     padding: 10px;
     font-weight: 300;
     max-width: 60%;
@@ -151,7 +161,7 @@ nav {
     background-color: #1e2a30;
     border-radius: 13px;
     text-align: center;
-    font-size: 1.4vh;
+    font-size: 70%;
     letter-spacing: 1px;
     clear: both;
 }
@@ -177,8 +187,10 @@ nav {
 
 #send-container {
     width: 100%;
-    height: 8%;
+    height: 55px;
     background-color: #1e2428;
+    position: fixed;
+    bottom: 0;
 }
 
 form {
@@ -193,8 +205,8 @@ form {
     width: 98%;
     margin: 5px;
     padding: 8px;
-    font-size: 3vh;
-    height: 80%;
+    font-size: 18px;
+    height: 40px;
     background-color: #33383b;
     color: #fff;
     border: none;
@@ -203,8 +215,8 @@ form {
 }
 
 #send-button {
-    width: 6vh;
-    height: 80%;
+    width: 40px;
+    height: 40px;
     margin: 5px;
     border: none;
     background-color: #6e7377;
@@ -217,16 +229,25 @@ form {
 }
 
 .send-icon {
-    font-size: 2.5vh;
+    font-size: 17px;
 }
 
 @media screen and (min-width: 768px) {
+    nav {
+        font-size: 14px;
+    }
+
+    #more-option-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .message {
+        margin: 3px 20px;
+    }
+
     #message-input {
         width: 99%;
-    }
-    
-    .message {
-        margin: 2px 20px;
     }
 }
 
@@ -236,26 +257,12 @@ form {
     }
 
     .message {
-        margin: 2px 30px;
-    }
-}
-
-@media screen and (max-width: 492px) {
-    nav {
-        font-size: 11px;
+        font-size: 125%;
+        margin: 3px 30px;
     }
 
-    #more-option-list {
-        right: 0;
-    }
-
-    .more-option-item, .online-list-item {
-        padding: 15px;
-        font-size: 15px;
-    }
-    
-    #online-list {
-        right: 100px;
+    .join-left {
+        font-size: 70%;
     }
 }
 
